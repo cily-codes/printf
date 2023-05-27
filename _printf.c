@@ -68,7 +68,7 @@ int _printf(const char *format, ...)
 		else
 		{
 			format++;
-			func = NULL;
+			func_point = NULL;
 
 			switch (*format)
 			{
