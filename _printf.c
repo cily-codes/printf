@@ -126,6 +126,10 @@ int _printf(const char *format, ...)
 				case 's':
 					func_point = print_a_string;
 					break;
+				case 'd':
+				case 'i':
+					func_point = print_an_integer;
+					break;
 				case '%':
 					_putchar('%');
 					sum++;
