@@ -19,7 +19,7 @@ int _printf(const char *format, ...)
 	{
 		if (*format != '%')
 		{
-			_putchar(*format);
+			printf_buffered("%c", *format);
 			sum++;
 		}
 		else
@@ -54,8 +54,7 @@ int _printf(const char *format, ...)
 					func_point = print_upper_hex;
 					break;
 				case '%':
-					_putchar('%');
-					sum++;
+					sum += printf_buffer("%%");
 					break;
 			}
 			if (func_point != NULL)
