@@ -22,5 +22,6 @@ int print_octal(va_list args_list);
 int print_lower_hex(va_list args_list);
 int print_upper_hex(va_list args_list);
 int printf_buffer(const char *format, ...);
+int print_custom_string(va_list args_list);
 
 #endif
