@@ -19,14 +19,13 @@ int _printf(const char *format, ...)
 	{
 		if (*format != '%')
 		{
-			_putchar(*format);
+			printf_buffer("%c", *format);
 			sum++;
 		}
 		else
 		{
 			format++;
 			func_point = NULL;
-
 			switch (*format)
 			{
 				case 'c':
@@ -42,9 +41,20 @@ int _printf(const char *format, ...)
 				case 'b':
 					func_point = print_in_binary;
 					break;
+				case 'u':
+					func_point = print_unsigned;
+					break;
+				case 'o': 
+					func_point = print_octal;
+					break;
+				case 'x':
+					func_point = print_lower_hex;
+					break;
+				case 'X':
+					func_point = print_upper_hex;
+					break;
 				case '%':
-					_putchar('%');
-					sum++;
+					sum += printf_buffer("%%");
 					break;
 			}
 			if (func_point != NULL)

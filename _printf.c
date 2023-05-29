@@ -19,7 +19,7 @@ int _printf(const char *format, ...)
 	{
 		if (*format != '%')
 		{
-			printf_buffered("%c", *format);
+			printf_buffer("%c", *format);
 			sum++;
 		}
 		else
@@ -42,7 +42,7 @@ int _printf(const char *format, ...)
 					func_point = print_in_binary;
 					break;
 				case 'u':
-					func_point = print_unsigned;
+					sum += print_unsigned_buffer(args_list);
 					break;
 				case 'o': 
 					func_point = print_octal;
