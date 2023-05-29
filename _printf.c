@@ -26,7 +26,6 @@ int _printf(const char *format, ...)
 		{
 			format++;
 			func_point = NULL;
-
 			switch (*format)
 			{
 				case 'c':
@@ -41,6 +40,18 @@ int _printf(const char *format, ...)
 					break;
 				case 'b':
 					func_point = print_in_binary;
+					break;
+				case 'u':
+					func_point = print_unsigned;
+					break;
+				case 'o': 
+					func_point = print_octal;
+					break;
+				case 'x':
+					func_point = print_lower_hex;
+					break;
+				case 'X':
+					func_point = print_upper_hex;
 					break;
 				case '%':
 					_putchar('%');
