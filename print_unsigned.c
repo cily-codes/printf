@@ -1,8 +1,7 @@
 #include "main.h"
 
-
 /**
- * print_unsigned_buffered - prints an unsigned decimal using buffered printing
+ * print_unsigned_buffer - prints an unsigned decimal with buffer
  *
  * @args_list: argument list
  *
