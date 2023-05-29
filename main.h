@@ -13,5 +13,6 @@ int print_a_string(va_list args_list);
 int print_an_integer(va_list args_list);
 int print_recursive(int num);
 int print_in_binary(va_list args_list);
+int print_unsigned(va_list args_list);
 
 #endif
