@@ -62,6 +62,12 @@ int _printf(const char *format, ...)
 				case '%':
 					sum += printf_buffer("%%");
 					break;
+				default:
+					if (*format == 'l' || *format == 'h')
+					{
+					sum += length_modifier(format, args_list);
+					}
+					break;
 			}
 			if (func_point != NULL)
 			{

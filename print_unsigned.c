@@ -25,6 +25,11 @@ int print_unsigned(va_list args_list)
 	int sum = 0;
 	unsigned int num = va_arg(args_list, unsigned int);
 
+	if (*format == 'l' || *format == 'h')
+	{
+		sum += length_modifier(format, args_list);
+	}
+
 	sum += print_recursive(num);
 
 	return (sum);

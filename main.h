@@ -32,5 +32,8 @@ int printf_buffer(const char *format, ...);
 int print_custom_string(va_list args_list);
 int print_pointer(va_list args_list);
 void flags_var(const char *format);
+int length_mod_l(va_list args_list);
+int length_mod_h(va_list args_list);
+int length_modifier(const char *format, va_list args_list);
 
 #endif

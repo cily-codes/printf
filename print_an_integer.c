@@ -32,6 +32,11 @@ int print_an_integer(va_list args_list)
 	int num = va_arg(args_list, int);
 	int sum = 0;
 
+	if (*format == 'l' || *format == 'h')
+	{
+		sum += length_modifier(format, args_list);
+	}
+
 	if (num < 0)
 	{
 		_putchar('-');
