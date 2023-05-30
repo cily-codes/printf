@@ -53,6 +53,12 @@ int _printf(const char *format, ...)
 				case 'X':
 					func_point = print_upper_hex;
 					break;
+				case 'S':
+					func_point = print_custom_string;
+					break;
+				case 'p':
+					func_point = print_pointer;
+					break;
 				case '%':
 					sum += printf_buffer("%%");
 					break;

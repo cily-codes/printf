@@ -42,7 +42,7 @@ int _printf(const char *format, ...)
 					func_point = print_in_binary;
 					break;
 				case 'u':
-					func_point = print_unsigned;
+					sum += print_unsigned_buffer(args_list);
 					break;
 				case 'o': 
 					func_point = print_octal;
@@ -52,6 +52,12 @@ int _printf(const char *format, ...)
 					break;
 				case 'X':
 					func_point = print_upper_hex;
+					break;
+				case 'S':
+					func_point = print_custom_string;
+					break;
+				case 'p':
+					func_point = print_pointer;
 					break;
 				case '%':
 					sum += printf_buffer("%%");
