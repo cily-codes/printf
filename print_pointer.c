@@ -9,11 +9,7 @@
  */
 int print_pointer(va_list args_list)
 {
-	int sum = 0;
 	void *ptr = va_arg(args_list, void *);
-	unsigned long int address = (unsigned long int)ptr;
 
-	sum += printf_buffer("0x%lx", address);
-
-	return (sum);
+	return printf_buffer("%p", ptr);
 }
