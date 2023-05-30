@@ -8,6 +8,13 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdbool.h>
+
+extern bool plus_flag;
+extern bool space_flag;
+extern bool hash_flag;
+extern bool zero_flag;
+extern bool minus_flag;
 
 int _putchar(char c);
 int _printf(const char *format, ...);
@@ -24,5 +31,6 @@ int print_upper_hex(va_list args_list);
 int printf_buffer(const char *format, ...);
 int print_custom_string(va_list args_list);
 int print_pointer(va_list args_list);
+void flags_var(const char *format);
 
 #endif

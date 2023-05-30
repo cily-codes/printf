@@ -65,6 +65,7 @@ int _printf(const char *format, ...)
 			}
 			if (func_point != NULL)
 			{
+				flags_var(format);
 				sum += func_point(args_list);
 			}
 		}
