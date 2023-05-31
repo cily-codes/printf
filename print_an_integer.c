@@ -50,6 +50,11 @@ int print_an_integer(const char *format, va_list args_list)
 		sum++;
 		num = -num;
 	}
+	if (num == -2147483648)
+	{
+		sum += printf_buffer("-2147483648");
+		return (sum);
+	}
 	if (num / 10)
 	{
 		sum += print_recursive(num / 10);
