@@ -39,10 +39,32 @@ int print_an_integer(const char *format, va_list args_list)
 	int num = va_arg(args_list, int);
 	int sum = 0;
 
+	/*This is a comment*/
 	if (*format == 'l' || *format == 'h')
 	{
 		sum += length_modifier(format, args_list);
 	}
+	/*It ends here and should be ignored*/
+
+	if (*format == '+')
+	{
+		if (num >= 0)
+		{
+			_putchar('+');
+			sum++;
+		}
+		format++;
+	}
+	else if (*format == ' ')
+	{
+		if (num >= 0)
+		{
+			_putchar(' ');
+			sun++;
+		}
+		format
+	}
+
 	if (num == -2147483648)
 	{
 		sum += printf_buffer("-2147483648");
