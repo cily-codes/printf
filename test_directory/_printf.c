@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 {
 	va_list args_list;
 	int sum = 0;
-	int (*func_point)(va_list);
+	int (*func_point)(const char *, va_list);
 
 	va_start(args_list, format);
 	while (*format != '\0')
@@ -62,10 +62,17 @@ int _printf(const char *format, ...)
 				case '%':
 					sum += printf_buffer("%%");
 					break;
+				default:
+					if (*format == 'l' || *format == 'h')
+					{
+					sum += length_modifier(format, args_list);
+					}
+					break;
 			}
 			if (func_point != NULL)
 			{
-				sum += func_point(args_list);
+				flags_var(format);
+				sum += func_point(format, args_list);
 			}
 		}
 		format++;

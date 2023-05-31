@@ -7,7 +7,7 @@
  *
  * Return: number of character printed
  */
-int print_octal(va_list args_list)
+int print_octal(const char *format, va_list args_list)
 {
 	int d = 0;
 	int sum = 0;

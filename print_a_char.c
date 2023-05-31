@@ -7,10 +7,11 @@
  *
  * Return: number of characters printed
  */
-int print_a_char(va_list args_list)
+int print_a_char(const char *format, va_list args_list)
 {
 	int a;
 
+	(void)(format);
 	a = va_arg(args_list, int);
 	_putchar(a);
 	return (1);

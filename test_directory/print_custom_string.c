@@ -7,11 +7,12 @@
  *
  * Return: number of characters printed
  */
-int print_custom_string(va_list args_list)
+int print_custom_string(const char *format, va_list args_list)
 {
 	int sum = 0;
 	char *string;
 
+	(void)(format);
 	string = va_arg(args_list, char *);
 	if (string == NULL)
 	{

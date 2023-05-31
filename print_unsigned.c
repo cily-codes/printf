@@ -10,6 +10,7 @@
 int print_unsigned_buffer(va_list args_list)
 {
 	unsigned int num = va_arg(args_list, unsigned int);
+
 	return printf_buffer("%u", num);
 }
 
@@ -20,7 +21,7 @@ int print_unsigned_buffer(va_list args_list)
  *
  * Return: number of characers printed
  */
-int print_unsigned(va_list args_list)
+int print_unsigned(const char *format, va_list args_list)
 {
 	int sum = 0;
 	unsigned int num = va_arg(args_list, unsigned int);

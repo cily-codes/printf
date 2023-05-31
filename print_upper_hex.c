@@ -7,7 +7,7 @@
  *
  * Return: number of characters printed
  */
-int print_upper_hex(va_list args_list)
+int print_upper_hex(const char *format, va_list args_list)
 {
 	int E = 0;
 	int sum = 0;

@@ -7,7 +7,7 @@
  *
  * Return: number of characters printed
  */
-int print_in_binary(va_list args_list)
+int print_in_binary(const char *format, va_list args_list)
 {
 	int b = 0;
 	int c;
@@ -15,6 +15,7 @@ int print_in_binary(va_list args_list)
 	int binary[32];
 	unsigned int num = va_arg(args_list, unsigned int);
 
+	(void)(format);
 	if (num == 0)
 	{
 		_putchar('0');

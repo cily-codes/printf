@@ -24,10 +24,11 @@ int print_recursive(int num)
  * print_an_integer - Prints an integer
  *
  * @args_list: argument list
+ * @format: format specifier
  *
  * Return: the number of characters printed
  */
-int print_an_integer(va_list args_list)
+int print_an_integer(const char *format, va_list args_list)
 {
 	int num = va_arg(args_list, int);
 	int sum = 0;

@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 {
 	va_list args_list;
 	int sum = 0;
-	int (*func_point)(va_list);
+	int (*func_point)(const char *, va_list);
 
 	va_start(args_list, format);
 	while (*format != '\0')
@@ -72,7 +72,7 @@ int _printf(const char *format, ...)
 			if (func_point != NULL)
 			{
 				flags_var(format);
-				sum += func_point(args_list);
+				sum += func_point(format, args_list);
 			}
 		}
 		format++;

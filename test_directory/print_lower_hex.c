@@ -7,13 +7,18 @@
  *
  * Return: number of characters printed
  */
-int print_lower_hex(va_list args_list)
+int print_lower_hex(const char *format, va_list args_list)
 {
 	int rem;
 	int e = 0;
 	int sum = 0;
 	char hex[100];
 	unsigned int num = va_arg(args_list, unsigned int);
+
+	if (*format == 'l' || *format == 'h')
+	{
+		sum += length_modifier(format, args_list);
+	}
 
 	if (num == 0)
 	{

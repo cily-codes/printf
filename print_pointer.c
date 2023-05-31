@@ -7,9 +7,10 @@
  *
  * Return: number of characters printed
  */
-int print_pointer(va_list args_list)
+int print_pointer(const char *format, va_list args_list)
 {
 	void *ptr = va_arg(args_list, void *);
 
+	(void)(format);
 	return printf_buffer("%p", ptr);
 }
