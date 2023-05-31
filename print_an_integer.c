@@ -60,9 +60,9 @@ int print_an_integer(const char *format, va_list args_list)
 		if (num >= 0)
 		{
 			_putchar(' ');
-			sun++;
+			sum++;
 		}
-		format
+		format++;
 	}
 
 	if (num == -2147483648)
