@@ -11,6 +11,12 @@ int print_recursive(int num)
 {
 	int sum = 0;
 
+	if (num < 0)
+	{
+		_putchar('-');
+		sum++;
+		num = -num;
+	}
 	if (num / 10)
 	{
 		sum += print_recursive(num / 10);
