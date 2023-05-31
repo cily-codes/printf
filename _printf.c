@@ -44,7 +44,7 @@ int _printf(const char *format, ...)
 				case 'u':
 					sum += print_unsigned_buffer(args_list);
 					break;
-				case 'o': 
+				case 'o':
 					func_point = print_octal;
 					break;
 				case 'x':

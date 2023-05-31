@@ -24,7 +24,7 @@ int length_mod_l(va_list args_list)
 	}
 	_putchar((num % 10) + '0');
 	sum++;
-	
+
 	return (sum);
 }
 
@@ -48,12 +48,12 @@ int length_mod_h(va_list args_list)
 	}
 	if (num / 10)
 	{
-		sum += print_recursive(num /10);
+		sum += print_recursive(num / 10);
 	}
-	 _putchar((num % 10) + '0');
-	 sum++;
+	_putchar((num % 10) + '0');
+	sum++;
 
-	 return (sum);
+	return (sum);
 }
 
 /**

@@ -11,13 +11,14 @@ int print_unsigned_buffer(va_list args_list)
 {
 	unsigned int num = va_arg(args_list, unsigned int);
 
-	return printf_buffer("%u", num);
+	return (printf_buffer("%u", num));
 }
 
 /**
  * print_unsigned - prints an unsigned decimal
  *
  * @args_list: argument list
+ * @format: format specifier
  *
  * Return: number of characers printed
  */
