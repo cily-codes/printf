@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_binary - prints an unsigned integer in binary
+ * print_in_binary - prints an unsigned integer in binary
  *
  * @args_list: argument list
  *
