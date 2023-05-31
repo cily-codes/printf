@@ -36,7 +36,7 @@ int print_recursive(int num)
  */
 int print_an_integer(const char *format, va_list args_list)
 {
-	long int num = va_arg(args_list, long int);
+	int num = va_arg(args_list, int);
 	int sum = 0;
 
 	if (*format == 'l' || *format == 'h')
