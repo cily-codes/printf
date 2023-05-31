@@ -43,17 +43,17 @@ int print_an_integer(const char *format, va_list args_list)
 	{
 		sum += length_modifier(format, args_list);
 	}
+	if (num == -2147483648)
+	{
+		sum += printf_buffer("-2147483648");
+		return (sum);
+	}
 
 	if (num < 0)
 	{
 		_putchar('-');
 		sum++;
 		num = -num;
-	}
-	if (num == -2147483648)
-	{
-		sum += printf_buffer("-2147483648");
-		return (sum);
 	}
 	if (num / 10)
 	{
