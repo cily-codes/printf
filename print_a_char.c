@@ -5,6 +5,8 @@
  *
  * @args_list: argument list
  *
+ * @format: format specifer
+ *
  * Return: number of characters printed
  */
 int print_a_char(const char *format, va_list args_list)

@@ -5,6 +5,8 @@
  *
  * @args_list: argument list
  *
+ * @format: format specifier
+ *
  * Return: number of character printed
  */
 int print_octal(const char *format, va_list args_list)

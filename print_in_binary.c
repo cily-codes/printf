@@ -5,6 +5,8 @@
  *
  * @args_list: argument list
  *
+ * @format: format specifier
+ *
  * Return: number of characters printed
  */
 int print_in_binary(const char *format, va_list args_list)
